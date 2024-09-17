@@ -33,29 +33,46 @@ changeText();
 
 // ------ Changing the greeting message based on the username -----
 // Specify the username or leave it blank to simulate a guest
-let userName = "Angele";
+let userName = "";
 let welcomeMessage = document.getElementById("welcome-message");
 
 // Conditional to check if userName is assigned or not 
 if(userName){
     console.log(userName);
     welcomeMessage.innerText = "Welcome, " + userName + "!";
-    
     //Creating an element using createElement method
     let specialOffer = document.createElement('h1'); // <h1> </h1>
     // Setting the content for the h2 element
     specialOffer.innerText = "A Special Offer only for you!!!"; // <h1> A Special Offer only for you!!! </h1>
     console.log(specialOffer); //testing if the element is created successfully
     // Once the element is created we append it to the DOM / HTML Page
+    // Accessing the about element using the class property
+    // console.log(document.getElementsByClassName("about"));
+    let aboutSection = document.querySelector(".about");
+    // console.log(aboutSection);
+    aboutSection.insertAdjacentElement("afterend", specialOffer);
     // Appending the newly created element to the body 
-    document.body.appendChild(specialOffer);
+    // document.body.appendChild(specialOffer);
 
 }
 else{
     console.log(userName);
     welcomeMessage.innerText = "Welcome Guest!";
+    // ------ Adding new element dynamically -----
+    // document.createElement('') then you add it to your DOM (appendChild)
+    let signUpButton = document.createElement('button');
+    signUpButton.innerText ="SIGN UP";
+    signUpButton.style.color = "red";
+    signUpButton.style.fontSize = "1.5em";
+    signUpButton.style.backgroundColor = "Orange";
+    signUpButton.style.padding = "5px";
+    let aboutSection = document.querySelector(".about");
+    aboutSection.insertAdjacentElement("afterend", signUpButton);
+
+    // --- Remove an element ----
+    let specialitySection = document.querySelector('.speciality');
+    specialitySection.remove();
 }
 
-// ------ Adding new element dynamically -----
-// document.createElement('') then you add it to your DOM (appendChild)
+
 
