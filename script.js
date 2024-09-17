@@ -42,10 +42,11 @@ if(userName){
     welcomeMessage.innerText = "Welcome, " + userName + "!";
     
     //Creating an element using createElement method
-    let specialOffer = document.createElement('h2');
+    let specialOffer = document.createElement('h1'); // <h1> </h1>
     // Setting the content for the h2 element
-    specialOffer.innerText = "A Special Offer only for you!!!";
-    console.log(specialOffer);
+    specialOffer.innerText = "A Special Offer only for you!!!"; // <h1> A Special Offer only for you!!! </h1>
+    console.log(specialOffer); //testing if the element is created successfully
+    // Once the element is created we append it to the DOM / HTML Page
     // Appending the newly created element to the body 
     document.body.appendChild(specialOffer);
 
