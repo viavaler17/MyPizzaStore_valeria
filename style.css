@@ -284,6 +284,16 @@ button:hover {
     background-color: #e08805;
 }
 
+
+
+.centered-image
+{
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid red;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .about {
