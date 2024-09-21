@@ -16,6 +16,13 @@ a {
     color: white;
 }
 
+.centered-image {
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid red;
+}
+
 /* Navbar */
 nav {
     display: flex;
